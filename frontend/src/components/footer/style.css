@@ -1,0 +1,13 @@
+
+
+.footer {
+  display: flex;
+  height: 180px;
+}
+
+.footer {
+  background: #181818;
+  line-height: 180px;
+  color: #818181;
+}
+

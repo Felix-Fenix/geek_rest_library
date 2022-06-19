@@ -39,9 +39,11 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'authors',
     'rest_framework',
+    'rest_framework.authtoken',
     'corsheaders',
     'todoapp',
-    'django_filters'
+    'django_filters',
+    
 ]
 
 MIDDLEWARE = [
@@ -143,4 +145,10 @@ REST_FRAMEWORK = {
         'rest_framework.renderers.JSONRenderer',
         'rest_framework.renderers.BrowsableAPIRenderer',
         ],
+    'DEFAULT_PERMISSION_CLASSES': ['rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'],
+                                    'DEFAULT_AUTHENTICATION_CLASSES': [
+                                    'rest_framework.authentication.BasicAuthentication',
+                                    'rest_framework.authentication.SessionAuthentication',
+                                    'rest_framework.authentication.TokenAuthentication',
+                                    ],
 }

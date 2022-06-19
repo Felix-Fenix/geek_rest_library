@@ -18,8 +18,8 @@ class Todo(models.Model):
     author = models.ForeignKey(verbose_name="Автор заметки", max_length=64, to=Author, on_delete=models.CASCADE)
     activ_is = models.BooleanField(verbose_name="Активность заметки")
 
-    def __str__(self):
-        return self.author
+    # def __str__(self):
+    #     return self.author
 
 
 class Project(models.Model):
